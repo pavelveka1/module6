@@ -20,7 +20,7 @@ public class ServiceConfiguration {
      * @return ModelMapper what is used for convert dto class to entity class
      */
     @Bean
-    @Profile("prod")
+  //  @Profile("prod")
     public ModelMapper modelMapperProd() {
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration()

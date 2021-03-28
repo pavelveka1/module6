@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.test.context.ActiveProfiles;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
@@ -20,6 +21,7 @@ import java.util.List;
  * Class GiftCertificateController - Rest controller for process of request to GiftCertificates
  */
 @RestController
+@ActiveProfiles("prod")
 @RequestMapping("/api")
 public class GiftCertificateController {
 
@@ -30,8 +32,6 @@ public class GiftCertificateController {
     @Autowired
     private GiftCertificateService service;
 
-    @Autowired
-    private GiftCertificateService service1;
     /**
      * giftCertificateDtoValidator is used  for validation of GiftCertificateDto
      */

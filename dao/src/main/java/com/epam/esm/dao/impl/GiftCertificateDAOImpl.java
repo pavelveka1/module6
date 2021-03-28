@@ -13,6 +13,7 @@ import com.epam.esm.entity.Tag;
 import com.epam.esm.entity.mapper.TagMapper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -22,11 +23,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  * GiftSertificateJDBCTemplate - class for work with GiftCertificate
  */
 @Repository
+@ActiveProfiles("prod")
 public class GiftCertificateDAOImpl implements GiftCertificateDAO {
 
     private static final Logger logger = Logger.getLogger(GiftCertificateDAOImpl.class);
@@ -57,6 +60,7 @@ public class GiftCertificateDAOImpl implements GiftCertificateDAO {
      * Instance of JdbcTemplate for work with DB
      */
     @Autowired
+   // @Qualifier("prod")
     private JdbcTemplate jdbcTemplate;
 
     /**

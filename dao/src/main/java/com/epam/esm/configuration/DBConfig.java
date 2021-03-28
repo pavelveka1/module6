@@ -2,6 +2,7 @@ package com.epam.esm.configuration;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -56,7 +57,7 @@ public class DBConfig {
      * @return DataSource
      */
     @Bean
-    @Profile("prod")
+    //@Profile("prod")
     public DataSource dataSourceProd() {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
@@ -76,8 +77,8 @@ public class DBConfig {
      * @return JdbcTemplate
      */
     @Bean
-    @Profile("prod")
-    public JdbcTemplate jdbcTemplateProd() {
+   // @Profile("prod")
+    public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSourceProd());
     }
 
