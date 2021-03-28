@@ -20,7 +20,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.stereotype.Service;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -28,7 +27,6 @@ import org.springframework.transaction.annotation.Transactional;
  * Contains methods for work with GiftCertificateDto
  */
 @Service
-@ActiveProfiles("prod")
 public class GiftSertificateServiceImpl implements GiftCertificateService {
 
     private static final Logger logger = Logger.getLogger(GiftSertificateServiceImpl.class);

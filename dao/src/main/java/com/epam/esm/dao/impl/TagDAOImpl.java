@@ -18,13 +18,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import org.springframework.test.context.ActiveProfiles;
+
 
 /**
  * TagJDBCTemplate - class for work with Tag
  */
 @Repository
-@ActiveProfiles("prod")
 public class TagDAOImpl implements TagDAO {
 
     private static final String GET_TAG_BY_ID = "select tag_id, name from tags where tag_id=?";

@@ -15,14 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import org.springframework.test.context.ActiveProfiles;
 
 /**
  * Class TagServiceImpl.
  * Contains methods for work with Tag class
  */
 @Service
-@ActiveProfiles("prod")
 public class TagServiceImpl implements TagService {
 
     /**

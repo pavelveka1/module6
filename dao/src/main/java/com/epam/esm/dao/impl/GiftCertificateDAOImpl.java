@@ -23,13 +23,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import org.springframework.test.context.ActiveProfiles;
+
 
 /**
  * GiftSertificateJDBCTemplate - class for work with GiftCertificate
  */
 @Repository
-@ActiveProfiles("prod")
+
 public class GiftCertificateDAOImpl implements GiftCertificateDAO {
 
     private static final Logger logger = Logger.getLogger(GiftCertificateDAOImpl.class);
